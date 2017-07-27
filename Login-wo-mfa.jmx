@@ -19,7 +19,7 @@
           </elementProp>
           <elementProp name="client_id" elementType="Argument">
             <stringProp name="Argument.name">client_id</stringProp>
-            <stringProp name="Argument.value">QWwxKuptGenzG6HGELC6Tz4Q4YPVBJGe</stringProp>
+            <stringProp name="Argument.value">jCwV5bBaXPkwoyhLYm4SW150T2Z0xqPt</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="email_domain" elementType="Argument">
@@ -86,6 +86,13 @@
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Login" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments">
+              <elementProp name="audience" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">https://bob-tlogs-rta.appliance-trial.com/api/v2/</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">audience</stringProp>
+              </elementProp>
               <elementProp name="client_id" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">${client_id}</stringProp>
@@ -116,7 +123,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">tehsis-tenant-mfa.appliance-trial.com</stringProp>
+          <stringProp name="HTTPSampler.domain">bob-tlogs-rta.appliance-trial.com</stringProp>
           <stringProp name="HTTPSampler.port">443</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
